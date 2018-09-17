@@ -15,14 +15,13 @@ void setup() {
 }
 
 void mousePressed() {
-	startX = 300;
-	startY = 0;
- 	endX = (int)(Math.random() * 600);
- 	endY = 0;
+	background(0);
+	redraw();
 }
 
 
 void draw() {
+	frameRate(8);
 	stroke((int)(Math.random()*256),(int)(Math.random()*256),(int)(Math.random()*256));
 		for ( int i = 0; i < flashes.length; i++) {
 				flashes[i].up();
@@ -45,10 +44,10 @@ class Flash{
 	 endX = (int)(Math.random() * 600);
 	}
 
-	void up() {
+void up() {
 	endX = startX + (int)(Math.random()*20)-10;
 	endY = startY + (int)(Math.random()*10);
-    line( startX,startY, endX, endY);
+    line(startX,startY, endX, endY);
     startX = endX;
     startY = endY;
 	
