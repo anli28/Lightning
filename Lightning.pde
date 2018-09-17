@@ -1,4 +1,4 @@
-Flash[] flashes = new Flash[100];
+Flash[] flashes = new Flash[1000];
 int startX = 300;
 int startY = 0;
 int endX = (int)(Math.random() * 600);
@@ -8,11 +8,19 @@ int endY = 0;
 void setup() {
 	size(600,600);
 	background(0);
-	strokeWeight(5);
-	for ( int i = 0; i < flashes.length; i++) {
+	strokeWeight(0.1);
+	for (int i = 0; i < flashes.length; i++) {
 		flashes[i] = new Flash();
 	}
 }
+
+void mousePressed() {
+	startX = 300;
+	startY = 0;
+ 	endX = (int)(Math.random() * 600);
+ 	endY = 0;
+}
+
 
 void draw() {
 	stroke((int)(Math.random()*256),(int)(Math.random()*256),(int)(Math.random()*256));
@@ -22,7 +30,6 @@ void draw() {
 	}
 
 }
-
 
 
 class Flash{
