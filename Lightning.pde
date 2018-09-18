@@ -8,7 +8,7 @@ int endY = 0;
 void setup() {
 	size(600,600);
 	background(0);
-	strokeWeight(5);
+	strokeWeight(1);
 	for (int i = 0; i < flashes.length; i++) {
 		flashes[i] = new Flash();
 	}
